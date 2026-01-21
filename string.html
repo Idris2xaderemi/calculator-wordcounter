@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="string.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="container">
+    <h1 class="text-center my-5 fw-semibold" style="color: #7a1f2b; font-size: 50px;">
+       Word Counter 
+    </h1>
+    <div class=" d-flex justify-content-center all flex-column align-items-center">
+        <textarea name="" id="textt" placeholder="type your text...." onkeyup="checkwordsz()" class="input my-5"></textarea><br>
+        <code class="fs-2 fw-bolder" style="color: #7a1f2b;"><span  id="codeval"> 0 </span><span>words</span></code>
+
+    </div>
+    
+    <a href="simple_calculator.html" class=" d-block text-center mx-auto text-decoration-none my-5 calchover " >
+     Go to  Simple Calculator 
+    </a>
+
+
+   <script>
+        // let myName = String("    qwqerqtyquiqopq    ")
+        // console.log(myName.length); //gets length and starts count from one
+        // console.log(myName.charAt(9));
+        // console.log(myName.concat("asdfghjkl"));
+        // console.log(myName.includes('q')); search for regex
+        // console.log(myName.trim());
+        //  console.log(myName.split('/\s+/'));
+
+         function checkwordsz() {
+             
+            let codeval = document.getElementById("codeval");
+
+            let amoun = textt.value.trim().split(/\s+/);
+            // console.log(textt.value.trim().split(' ').length);
+
+            codeval.innerHTML =   amoun.length + " ";
+
+         }
+
+         
+        
+         
+   </script> 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
