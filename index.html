@@ -32,11 +32,17 @@
         //  console.log(myName.split('/\s+/'));
 
          function checkwordsz() {
-             
+
+    
             let codeval = document.getElementById("codeval");
 
             let amoun = textt.value.trim().split(/\s+/);
             // console.log(textt.value.trim().split(' ').length);
+
+            if (amoun=='') {
+                codeval.innerHTML = 0 + " "
+            return;
+            }
 
             codeval.innerHTML =   amoun.length + " ";
 
