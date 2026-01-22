@@ -44,6 +44,8 @@
                 <button onclick="clickme('%')" class="rounded">%</button>
                 <button onclick="clearinp()" class="rounded">C</button>
                 <button onclick="solve()" class="rounded">=</button>
+                <button onclick="clickme('.')" class="rounded">.</button>
+                <button onclick="dellast()" class="rounded">Del</button>
             </div>
 
         </div>
@@ -67,6 +69,10 @@
         function clearinp () {
             inp.value=""
 
+        }
+
+        function dellast() {
+          inp.value =  inp.value.slice(0,-1)
         }
     </script>
 </body>
